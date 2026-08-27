@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-zinc-900 font-barlow text-zinc-200;
+  }
+
+  *,
+  *:before,
+  *:after {
+    @apply border-zinc-600;
+  }
+
+  .inline-code {
+    @apply inline-block rounded bg-white/10 px-1 text-sm font-bold;
+  }
+}
+
+@layer utilities {
+  .header .header-bg,
+  .header .header-info,
+  .header .header-content {
+    @apply transition-all;
+  }
+
+  @supports not (animation-range: 0rem 18rem) {
+    .header[data-collapsed] {
+      position: sticky;
+    }
+    .header[data-collapsed="true"] {
+      top: 0;
+    }
+  }
+
+  @supports (animation-range: 0rem 18rem) {
+    body {
+      @apply pt-80;
+    }
+
+    .header {
+      @apply fixed left-0 top-0;
+      container-name: header;
+      container-type: size;
+      animation: scroll-sticky linear forwards;
+      animation-timeline: scroll();
+      animation-range: 0rem 18rem;
+    }
+  }
+
+  .header[data-collapsed="true"] img {
+    @apply w-12 border-2;
+  }
+
+  .header[data-collapsed="true"] .header-info {
+    @apply text-start;
+  }
+
+  .header[data-collapsed="true"] h1 {
+    @apply text-2xl;
+  }
+
+  .header[data-collapsed="true"] h3 {
+    @apply text-sm leading-none;
+  }
+
+  .header[data-collapsed="true"] .header-bg {
+    @apply opacity-0;
+  }
+
+  .header[data-collapsed="true"] .header-content {
+    @apply h-full flex-row;
+  }
+
+  @container header (height < 8rem) {
+    .header img {
+      @apply w-12 border-2;
+    }
+
+    .header .header-info {
+      @apply text-start;
+    }
+
+    .header h1 {
+      @apply text-2xl;
+    }
+
+    .header h3 {
+      @apply text-sm leading-none;
+    }
+
+    .header .header-bg {
+      @apply opacity-0;
+    }
+
+    .header .header-content {
+      @apply h-full flex-row;
+    }
+  }
+}
+
+@keyframes scroll-sticky {
+  0% {
+    height: 18rem;
+  }
+
+  100% {
+    top: 0;
+    height: 4rem;
+    padding: 0 0.5rem;
+    border-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
