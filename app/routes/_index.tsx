@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Content, Heading, Paragraph } from "~/components/Elements";
+import { Content, Heading } from "~/components/Elements";
 import { Header } from "~/components/Header";
 import { GetToKnowMe } from "~/sections/GetToKnowMe";
 import { BackgrounInformation } from "~/sections/BackgroundInformation";
@@ -14,11 +14,11 @@ import { NpmLibraries } from "~/sections/NpmLibraries";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Igor Ribeiro - Tailwind Application" },
+    { title: "Igor Ribeiro - Full Stack Developer" },
     {
       name: "description",
       content:
-        "Hey Steve and Adam! This is my application for the Designer Engineer role.",
+        "Full Stack Developer specializing in React/TypeScript, with 10+ years building frontend architecture, design systems, and internal developer tools, from custom compilers and CLI generators to design systems and platform rebuilds, across e-commerce, SaaS, and agency environments. Recently working with AI-driven, agentic workflows to extend product capabilities.",
     },
   ];
 };
@@ -50,17 +50,6 @@ export default function Index() {
         <HangmanGame />
         <Divider />
         <NpmLibraries />
-      </Content>
-
-      <Content>
-        <Paragraph>
-          I would love to chat about others things with you! Besides coding I
-          like to watch/play basketball, play poker and I also play the Piano. I
-          hope my experience is enough to get me to the next rounds. Can't wait
-          for your feedback. Let me know if there is anything else I can help
-          with!
-        </Paragraph>
-        <Paragraph>See you soon!</Paragraph>
       </Content>
     </div>
   );

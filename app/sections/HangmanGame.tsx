@@ -1,5 +1,12 @@
-import { Heading, Anchor, Paragraph } from "~/components/Elements";
+import { Heading, Paragraph } from "~/components/Elements";
 import { ImageSelector } from "~/components/ImageSelector";
+import { asset } from "~/utils";
+
+const IMAGES = [
+  "/hangman-game/components.png",
+  "/hangman-game/cards.png",
+  "/hangman-game/ui-concept.png",
+].map(asset);
 
 export function HangmanGame() {
   return (
@@ -10,13 +17,7 @@ export function HangmanGame() {
         this classic game. I'm trying to transform it into a card-like
         multiplayer game. Here are some of the concept designs.
       </Paragraph>
-      <ImageSelector
-        images={[
-          "hangman-game/components.png",
-          "hangman-game/cards.png",
-          "hangman-game/ui-concept.png",
-        ]}
-      />
+      <ImageSelector images={IMAGES} />
     </>
   );
 }

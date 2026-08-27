@@ -1,5 +1,6 @@
 import { Heading, Anchor, Paragraph } from "~/components/Elements";
 import { GithubIcon, OpenIcon } from "~/components/Icons";
+import { asset } from "~/utils";
 
 export function MemoryGame() {
   return (
@@ -11,7 +12,7 @@ export function MemoryGame() {
         <Anchor href="https://webassembly.org/">WASM</Anchor>.
       </Paragraph>
       <div className="flex flex-col items-center gap-2">
-        <img src="/memory-game/gameplay.gif" />
+        <img src={asset("/memory-game/gameplay.gif")} />
         <div className="flex gap-2">
           <Anchor
             href="https://igor-ribeiro.github.io/memory-game-rs/"

@@ -1,5 +1,13 @@
 import { Heading, Paragraph } from "~/components/Elements";
 import { ImageSelector } from "~/components/ImageSelector";
+import { asset } from "~/utils";
+
+const IMAGES = [
+  "/invoice/empty-state.png",
+  "/invoice/invoice-list.png",
+  "/invoice/invoice-detail.png",
+  "/invoice/invoice-email.png",
+].map(asset);
 
 export function InvoiceManager() {
   return (
@@ -12,14 +20,7 @@ export function InvoiceManager() {
         send via Gmail directly from the app.
       </Paragraph>
 
-      <ImageSelector
-        images={[
-          "invoice/empty-state.png",
-          "invoice/invoice-list.png",
-          "invoice/invoice-detail.png",
-          "invoice/invoice-email.png",
-        ]}
-      />
+      <ImageSelector images={IMAGES} />
     </>
   );
 }

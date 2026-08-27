@@ -12,25 +12,18 @@ npm run dev
 
 ## Deployment
 
-First, build your app for production:
+This is a Remix **SPA Mode** app (no server). It builds to static files in
+`build/client` and is deployed to GitHub Pages by
+`.github/workflows/deploy.yml` on every push to `main`.
+
+Build locally:
 
 ```sh
 npm run build
+npm run preview
 ```
 
-Then run the app in production mode:
+One-time GitHub setup: repo **Settings → Pages → Build and deployment →
+Source: GitHub Actions**.
 
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
+If the repo name changes, update `basename` in `vite.config.ts`.

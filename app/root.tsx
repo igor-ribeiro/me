@@ -8,8 +8,10 @@ import {
 import stylesheet from "~/tailwind.css?url";
 import { LinksFunction } from "@remix-run/node";
 import { Analytics } from "@vercel/analytics/react";
+import { asset } from "~/utils";
 
 export const links: LinksFunction = () => [
+  { rel: "icon", href: asset("favicon.ico") },
   { rel: "stylesheet", href: stylesheet },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {

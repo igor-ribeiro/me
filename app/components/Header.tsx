@@ -1,5 +1,6 @@
 import throttle from "lodash.throttle";
 import { useEffect } from "react";
+import { asset } from "~/utils";
 import { Anchor } from "./Elements";
 import { GithubIcon, LinkedInIcon, XIcon } from "./Icons";
 
@@ -11,13 +12,13 @@ export function Header() {
       <div
         className="header-bg pointer-events-none absolute left-0 top-0 z-0 h-full w-full bg-cover bg-center bg-no-repeat opacity-20 blur-lg"
         style={{
-          backgroundImage: "url(profile.webp)",
+          backgroundImage: `url(${asset("me.jpeg")})`,
         }}
       />
 
       <div className="header-content relative z-10 flex w-full max-w-3xl flex-col items-center gap-2">
         <img
-          src="/profile.webp"
+          src={asset("me.jpeg")}
           className="aspect-square w-32 rounded-full border-4 border-zinc-200"
         />
 
@@ -27,7 +28,7 @@ export function Header() {
         </div>
 
         <div className="flex justify-center gap-2 justify-self-end">
-          <Anchor className="p-1" href="https://x.com/ribeirolabs">
+          <Anchor className="p-1" href="https://x.com/__iribeiro">
             <XIcon />
           </Anchor>
           <Anchor className="p-1" href="https://github.com/igor-ribeiro">
@@ -35,7 +36,7 @@ export function Header() {
           </Anchor>
           <Anchor
             className="p-1"
-            href="https://www.linkedin.com/in/igor-ribeiro-8830b693/"
+            href="https://www.linkedin.com/in/igorsantosribeiro/"
           >
             <LinkedInIcon />
           </Anchor>

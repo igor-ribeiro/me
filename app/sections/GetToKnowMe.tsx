@@ -1,5 +1,6 @@
 import { Content, Heading, Paragraph, Anchor } from "~/components/Elements";
 import { ImageSelector } from "~/components/ImageSelector";
+import { asset } from "~/utils";
 
 export function GetToKnowMe() {
   return (
@@ -7,21 +8,12 @@ export function GetToKnowMe() {
       <Content>
         <Heading as="h2">Get to know me</Heading>
         <Paragraph>
-          Hey Adm and Steve! I hope everything is going well. I'm a developer
-          from a small city (Jundiaí) in São Paulo, Brazil. I'm about to turn 29
-          (April 16th), married and father of a beatiful 2 years old daughter.
-        </Paragraph>
-
-        <Paragraph>
-          For the past 1 year and 8 months I've working remote full time for an
-          american company{" "}
-          <Anchor href="https://galleysolutions.com">Galley Solutions</Anchor>{" "}
-          as part of the Frontend team. We'll talk more about that later.
-          {/*
-          Most of my work have been improving UX
-          either by tweaking the UI design or by implemeting features focusing
-          on usability.
-          */}
+          Full Stack Developer specializing in React/TypeScript, with 10+ years
+          building frontend architecture, design systems, and internal developer
+          tools, from custom compilers and CLI generators to design systems and
+          platform rebuilds, across e-commerce, SaaS, and agency environments.
+          Recently working with AI-driven, agentic workflows to extend product
+          capabilities.
         </Paragraph>
 
         <Paragraph>
@@ -38,11 +30,11 @@ export function GetToKnowMe() {
 }
 
 const DRAWINGS = [
-  "drawings/mona-lisa-2009.jpg",
-  "drawings/wolverine-2009.jpg",
-  "drawings/girl-2011.jpg",
-  "drawings/joker-2011.jpg",
-  "drawings/leonardo-da-vinci-2012.jpg",
-  "drawings/thelonious-monk-2017.jpg",
-  "drawings/faceless-girl-2018.jpg",
-];
+  "/drawings/mona-lisa-2009.jpg",
+  "/drawings/wolverine-2009.jpg",
+  "/drawings/girl-2011.jpg",
+  "/drawings/joker-2011.jpg",
+  "/drawings/leonardo-da-vinci-2012.jpg",
+  "/drawings/thelonious-monk-2017.jpg",
+  "/drawings/faceless-girl-2018.jpg",
+].map(asset);

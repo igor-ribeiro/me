@@ -1,6 +1,7 @@
 import { Code } from "~/components/Code";
 import { Heading, Paragraph, Anchor } from "~/components/Elements";
 import { ImageSelector } from "~/components/ImageSelector";
+import { asset } from "~/utils";
 
 export function DynamicTheme() {
   return (
@@ -8,8 +9,8 @@ export function DynamicTheme() {
       <Heading as="h3">Dynamic theming</Heading>
       <Paragraph>
         After that project we only kept one brand so web moved to a singular{" "}
-        <Anchor href="https://nextjs.org/">Next.js</Anchor> website and my new
-        challenge was to create dynamic themes based on products/categories.
+        Next.js website and my new challenge was to create dynamic themes based
+        on products/categories.
       </Paragraph>
       <Paragraph>
         Looking back now, it's somewaht similar to Tailwind, we had a
@@ -78,4 +79,4 @@ export function DynamicTheme() {
 const THEMES = [
   "/dynamic-themes/product-a.png",
   "/dynamic-themes/product-b.png",
-];
+].map(asset);

@@ -1,4 +1,4 @@
-import { Anchor, Heading, Paragraph } from "~/components/Elements";
+import { Heading, Paragraph } from "~/components/Elements";
 import { Code } from "~/components/Code";
 
 export function WebsiteCompiler() {
@@ -14,9 +14,7 @@ export function WebsiteCompiler() {
       <Paragraph>OK, let me show you an example.</Paragraph>
       <Code {...PAGE_REACT_BEFORE} />
       <Paragraph>
-        From that code I used{" "}
-        <Anchor href="https://babeljs.io/">Babel.js</Anchor> to generate the
-        following JSON
+        From that code I used Babel.js to generate the following JSON
       </Paragraph>
       <div className="grid items-start gap-2 md:grid-cols-2">
         <Code {...PAGE_JSON_BEFORE} />
