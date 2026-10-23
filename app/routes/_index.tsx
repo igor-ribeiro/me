@@ -3,6 +3,8 @@ import { Content, Heading } from "~/components/Elements";
 import { Header } from "~/components/Header";
 import { GetToKnowMe } from "~/sections/GetToKnowMe";
 import { BackgrounInformation } from "~/sections/BackgroundInformation";
+import { Experience } from "~/sections/Experience";
+import { Skills } from "~/sections/Skills";
 import { WebsiteCompiler } from "~/sections/WebsiteCompiler";
 import { DynamicTheme } from "~/sections/DynamicTheme";
 import { MicroFrontendTool } from "~/sections/MicroFrontendTool";
@@ -28,7 +30,9 @@ export default function Index() {
     <div className="grid gap-4 px-2 pb-6">
       <Header />
       <GetToKnowMe />
-      <BackgrounInformation />
+      {/*<BackgrounInformation />*/}
+      <Skills />
+      <Experience />
 
       <Content>
         <Heading as="h2">Projects I'm proud of</Heading>
