@@ -5,7 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 installGlobals();
 
-const basename = "/me/";
+const basename = "/";
 
 export default defineConfig({
   base: basename,
